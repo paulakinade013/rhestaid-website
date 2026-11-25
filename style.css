@@ -1,0 +1,1024 @@
+
+
+
+
+<
+/* =====================================================
+   RHESTAID WEBSITE
+   COMPLETE DIAMOND THEME STYLESHEET
+   ===================================================== */
+
+
+/* 1. COLOURS */
+
+:root {
+    --diamond-white: #F7FAFC;
+    --diamond-blue: #9CCCEB;
+    --ice-silver: #DCE8F0;
+    --deep-sapphire: #14283C;
+    --platinum: #B8C5D0;
+    --white: #FFFFFF;
+
+    --text: #33475B;
+    --muted: #536779;
+    --border: #D5E2EB;
+
+    --shadow: 0 12px 35px rgba(20, 40, 60, 0.08);
+}
+
+
+/* 2. GLOBAL SETTINGS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--diamond-white);
+    color: var(--text);
+    line-height: 1.7;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    font: inherit;
+}
+
+.container {
+    width: min(1120px, 90%);
+    margin: 0 auto;
+}
+
+
+/* 3. HEADER AND NAVIGATION */
+
+.site-header {
+    width: 100%;
+    background: #FFFFFF;
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    min-height: 82px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--deep-sapphire);
+    font-size: 1.45rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.logo-diamond {
+    color: #6AAED6;
+    font-size: 1.7rem;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: var(--deep-sapphire);
+    font-size: 0.88rem;
+    font-weight: 600;
+    transition: 0.25s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #3989BB;
+}
+
+.nav-links .nav-contact {
+    background: var(--deep-sapphire);
+    color: #FFFFFF;
+    padding: 11px 19px;
+    border-radius: 5px;
+}
+
+.nav-links .nav-contact:hover,
+.nav-links .nav-contact.active {
+    background: #284C6A;
+    color: #FFFFFF;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--deep-sapphire);
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+
+/* 4. BUTTONS */
+
+.btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 13px 25px;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    transition: 0.25s ease;
+}
+
+.btn-primary {
+    background: var(--deep-sapphire);
+    color: #FFFFFF;
+    border: 1px solid var(--deep-sapphire);
+}
+
+.btn-primary:hover {
+    background: #284C6A;
+    border-color: #284C6A;
+    color: #FFFFFF;
+    transform: translateY(-2px);
+}
+
+.btn-outline {
+    background: transparent;
+    color: var(--deep-sapphire);
+    border: 1px solid var(--deep-sapphire);
+}
+
+.btn-outline:hover {
+    background: var(--deep-sapphire);
+    color: #FFFFFF;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 28px;
+}
+
+
+/* 5. HERO SECTION */
+
+.hero {
+    padding: 95px 0;
+    background:
+        radial-gradient(circle at 85% 20%, rgba(156, 204, 235, 0.22), transparent 32%),
+        linear-gradient(135deg, #FFFFFF, #EDF5FA);
+    overflow: hidden;
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    align-items: center;
+    gap: 65px;
+}
+
+.hero-content {
+    min-width: 0;
+}
+
+.eyebrow {
+    color: #3989BB;
+    font-size: 0.76rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    color: var(--deep-sapphire);
+    font-size: clamp(2.7rem, 5vw, 4.6rem);
+    line-height: 1.12;
+    letter-spacing: -2px;
+    margin-bottom: 23px;
+}
+
+.hero-content > p:not(.eyebrow) {
+    max-width: 590px;
+    color: var(--muted);
+    font-size: 1.08rem;
+}
+
+.hero-note {
+    margin-top: 25px;
+    font-size: 0.9rem;
+    color: var(--muted);
+}
+
+.status-dot {
+    display: inline-block;
+    width: 9px;
+    height: 9px;
+    background: #55A985;
+    border-radius: 50%;
+    margin-right: 7px;
+}
+
+
+/* 6. DIAMOND HERO GRAPHIC */
+
+.hero-visual {
+    min-height: 420px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.diamond-orbit {
+    position: absolute;
+    width: 290px;
+    height: 290px;
+    border: 1px solid rgba(77, 145, 188, 0.4);
+    transform: rotate(45deg);
+    border-radius: 25px;
+}
+
+.orbit-one {
+    width: 270px;
+    height: 270px;
+}
+
+.orbit-two {
+    width: 365px;
+    height: 365px;
+    border-color: rgba(77, 145, 188, 0.2);
+}
+
+.diamond-symbol {
+    color: #4F9BC8;
+    font-size: 9rem;
+    text-shadow: 0 15px 35px rgba(77, 145, 188, 0.2);
+    z-index: 1;
+}
+
+.visual-caption {
+    position: absolute;
+    bottom: 12px;
+    color: var(--deep-sapphire);
+    font-weight: 700;
+    letter-spacing: 3px;
+    font-size: 0.8rem;
+}
+
+
+/* 7. GENERAL SECTIONS */
+
+.section {
+    padding: 85px 0;
+}
+
+.section-soft {
+    background: #EAF2F7;
+}
+
+.section-heading {
+    max-width: 720px;
+    text-align: center;
+    margin: 0 auto 48px;
+}
+
+.section-heading h2,
+.split-section h2,
+.center-action h2 {
+    color: var(--deep-sapphire);
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    line-height: 1.2;
+    margin-bottom: 18px;
+}
+
+.section-heading > p:last-child {
+    color: var(--muted);
+}
+
+
+/* 8. FEATURE CARDS */
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 23px;
+}
+
+.feature-card {
+    background: #FFFFFF;
+    color: var(--text);
+    padding: 30px;
+    border: 1px solid var(--border);
+    border-radius: 9px;
+    box-shadow: var(--shadow);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 18px 40px rgba(20, 40, 60, 0.12);
+}
+
+.feature-icon {
+    color: #3989BB;
+    font-size: 2rem;
+    margin-bottom: 16px;
+}
+
+.feature-card h3,
+.direction-card h3,
+.division-card h3,
+.ecosystem-item h3 {
+    color: var(--deep-sapphire);
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+}
+
+.feature-card p,
+.direction-card p,
+.division-card p,
+.ecosystem-item p {
+    color: var(--muted);
+    font-size: 0.95rem;
+}
+
+.text-link {
+    display: inline-block;
+    margin-top: 14px;
+    color: #246D9B;
+    font-weight: 700;
+}
+
+.text-link:hover {
+    color: var(--deep-sapphire);
+}
+
+
+/* 9. SPLIT SECTIONS */
+
+.split-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 55px;
+}
+
+.split-section > div > p:not(.eyebrow) {
+    margin-bottom: 17px;
+    color: var(--muted);
+}
+
+
+/* 10. INFORMATION PANEL */
+
+.info-panel {
+    background: #14283C;
+    color: #FFFFFF;
+    padding: 42px;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+
+.info-panel h3 {
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+    color: #FFFFFF;
+}
+
+.info-panel p {
+    color: #FFFFFF;
+    margin-bottom: 15px;
+}
+
+.info-panel .eyebrow {
+    color: var(--diamond-blue);
+}
+
+.panel-symbol {
+    color: var(--diamond-blue);
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+
+/* 11. FOUNDER PORTRAIT */
+
+.founder-preview {
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    align-items: center;
+    gap: 65px;
+}
+
+.founder-image-wrap,
+.profile-image-wrap {
+    background: transparent;
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    overflow: hidden;
+}
+
+.founder-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    object-position: center;
+    aspect-ratio: auto;
+    padding: 0;
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.founder-content h2,
+.profile-content h2 {
+    color: var(--deep-sapphire);
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    line-height: 1.2;
+    margin-bottom: 17px;
+}
+
+.founder-content h3 {
+    color: #3989BB;
+    margin-bottom: 15px;
+}
+
+.founder-content p,
+.profile-content p {
+    color: var(--muted);
+    margin-bottom: 16px;
+}
+
+
+/* 12. FOUNDER COMPANY PANEL */
+
+.founder-company {
+    margin-top: 30px;
+    padding: 25px;
+    background: #DCE8F0;
+    color: #14283C;
+    border-left: 4px solid #6AAED6;
+    border-radius: 5px;
+}
+
+.founder-company h3,
+.founder-company p,
+.founder-company a {
+    color: #14283C;
+}
+
+
+/* 13. DARK SECTIONS */
+
+.section-dark {
+    background: #14283C;
+    color: #FFFFFF;
+}
+
+.light-heading h2,
+.section-dark .center-action h2 {
+    color: #FFFFFF;
+}
+
+.light-heading p,
+.section-dark .center-action > p:not(.eyebrow) {
+    color: #DCE8F0;
+}
+
+.section-dark .eyebrow {
+    color: #9CCCEB;
+}
+
+.direction-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.direction-card {
+    background: #FFFFFF;
+    padding: 35px;
+    border-radius: 9px;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+}
+
+.direction-card .eyebrow {
+    margin-top: 8px;
+}
+
+.center-action {
+    text-align: center;
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+.center-action > p:not(.eyebrow) {
+    color: var(--muted);
+    margin-bottom: 25px;
+}
+
+
+/* 14. PROJECTS */
+
+.project-preview,
+.ecosystem-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 23px;
+}
+
+.project-main-card {
+    background: #FFFFFF;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 35px;
+    box-shadow: var(--shadow);
+}
+
+.project-label {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 30px;
+    background: #E5F3FA;
+    color: #246D9B;
+    font-size: 0.75rem;
+    font-weight: 800;
+    margin-bottom: 18px;
+}
+
+.project-main-content h2 {
+    color: var(--deep-sapphire);
+    font-size: 1.7rem;
+    margin-bottom: 15px;
+}
+
+.project-main-content p {
+    color: var(--muted);
+}
+
+.project-number {
+    color: #6AAED6;
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.project-status {
+    display: inline-block;
+    color: #246D9B;
+    background: #E5F3FA;
+    padding: 5px 11px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    margin-top: 15px;
+}
+
+
+/* 15. DIVISIONS */
+
+.division-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 23px;
+}
+
+.division-card {
+    background: #FFFFFF;
+    border: 1px solid var(--border);
+    border-radius: 9px;
+    padding: 28px;
+    box-shadow: var(--shadow);
+}
+
+.division-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 17px;
+}
+
+.division-number {
+    color: var(--platinum);
+    font-size: 1.2rem;
+    font-weight: 800;
+}
+
+.division-symbol {
+    color: #4F9BC8;
+    font-size: 2rem;
+}
+
+.ecosystem-item {
+    background: #FFFFFF;
+    padding: 27px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+}
+
+.muted-note {
+    color: var(--muted);
+    font-size: 0.88rem;
+    margin-top: 18px;
+}
+
+
+/* 16. PAGE HERO */
+
+.page-hero {
+    padding: 85px 0;
+    text-align: center;
+    background: linear-gradient(135deg, #FFFFFF 0%, #DCE8F0 100%);
+}
+
+.page-hero h1 {
+    color: var(--deep-sapphire);
+    font-size: clamp(2.5rem, 5vw, 3.8rem);
+    line-height: 1.15;
+    margin-bottom: 18px;
+}
+
+.page-hero p:not(.eyebrow) {
+    max-width: 700px;
+    margin: 0 auto;
+    color: var(--muted);
+    font-size: 1.05rem;
+}
+
+
+/* 17. ABOUT PAGE */
+
+.founder-profile {
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    align-items: start;
+    gap: 55px;
+}
+
+
+/* 18. CONTACT PAGE */
+
+.contact-details {
+    display: grid;
+    gap: 18px;
+    margin-top: 30px;
+}
+
+.contact-details .feature-card {
+    padding: 25px;
+}
+
+.contact-details .feature-card p {
+    margin-bottom: 5px;
+}
+
+
+/* 19. CONTACT BANNER */
+
+.contact-banner {
+    background: #DCE8F0;
+    padding: 45px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+
+/* 20. FOOTER */
+
+.site-footer {
+    background: #0D2032;
+    color: #FFFFFF;
+    padding: 35px 0;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.footer-logo {
+    color: #FFFFFF;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 22px;
+}
+
+.footer-links a {
+    color: #DCE8F0;
+    font-size: 0.9rem;
+}
+
+.footer-links a:hover {
+    color: #9CCCEB;
+}
+
+.copyright {
+    width: 100%;
+    border-top: 1px solid rgba(255, 255, 255, 0.13);
+    padding-top: 20px;
+    color: #B8C5D0;
+    font-size: 0.85rem;
+    text-align: center;
+}
+
+
+/* 21. TABLET RESPONSIVENESS */
+
+@media (max-width: 950px) {
+
+    .nav-links {
+        gap: 12px;
+    }
+
+    .nav-links a {
+        font-size: 0.8rem;
+    }
+
+    .hero-grid {
+        gap: 30px;
+    }
+
+    .division-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* 22. MOBILE RESPONSIVENESS */
+
+@media (max-width: 760px) {
+
+    .navbar {
+        min-height: 70px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: #FFFFFF;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 12px 5% 20px;
+        border-bottom: 1px solid var(--border);
+        box-shadow: var(--shadow);
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .nav-links li {
+        width: 100%;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 13px 8px;
+        font-size: 0.95rem;
+    }
+
+    .nav-links .nav-contact {
+        margin-top: 8px;
+        text-align: center;
+    }
+
+    .hero {
+        padding: 65px 0;
+    }
+
+    .hero-grid,
+    .split-section,
+    .founder-preview,
+    .founder-profile {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .hero h1 {
+        font-size: 2.8rem;
+    }
+
+    .hero-visual {
+        min-height: 320px;
+    }
+
+    .diamond-symbol {
+        font-size: 7rem;
+    }
+
+    .orbit-two {
+        width: 290px;
+        height: 290px;
+    }
+
+    .orbit-one {
+        width: 220px;
+        height: 220px;
+    }
+
+    .section {
+        padding: 65px 0;
+    }
+
+    .feature-grid,
+    .direction-grid,
+    .division-grid,
+    .project-preview,
+    .ecosystem-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .founder-image-wrap,
+    .profile-image-wrap {
+        max-width: 480px;
+        margin: 0 auto;
+    }
+
+    .info-panel {
+        padding: 30px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-links {
+        justify-content: center;
+    }
+}
+
+
+/* 23. SMALL MOBILE SCREENS */
+
+@media (max-width: 420px) {
+
+    .container {
+        width: 92%;
+    }
+
+    .hero h1 {
+        font-size: 2.35rem;
+    }
+
+    .page-hero {
+        padding: 65px 0;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .feature-card,
+    .direction-card,
+    .division-card,
+    .project-main-card {
+        padding: 23px;
+    }
+}
+
+
+/* 24. FINAL TEXT CONTRAST PROTECTION */
+
+.info-panel .btn-primary {
+    background: #9CCCEB;
+    color: #14283C;
+    border-color: #9CCCEB;
+}
+
+.info-panel .btn-primary:hover {
+    background: #FFFFFF;
+    color: #14283C;
+    border-color: #FFFFFF;
+}
+
+.founder-company .text-link {
+    color: #246D9B;
+}
+
+.founder-company .text-link:hover {
+    color: #14283C;
+}
+
+/* =========================================
+   RHESTAID: FIX INVISIBLE CARD CONTENT
+   ========================================= */
+
+/* Make all cards inside dark sections readable */
+.section-dark .feature-card,
+.section-dark .division-card,
+.section-dark .ecosystem-item,
+.section-dark .direction-card,
+.section-dark .project-main-card,
+.section-dark article {
+    background: #FFFFFF !important;
+    color: #14283C !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* Force headings and paragraphs to use dark text */
+.section-dark .feature-card h1,
+.section-dark .feature-card h2,
+.section-dark .feature-card h3,
+.section-dark .feature-card p,
+.section-dark .division-card h1,
+.section-dark .division-card h2,
+.section-dark .division-card h3,
+.section-dark .division-card p,
+.section-dark .ecosystem-item h1,
+.section-dark .ecosystem-item h2,
+.section-dark .ecosystem-item h3,
+.section-dark .ecosystem-item p,
+.section-dark .direction-card h1,
+.section-dark .direction-card h2,
+.section-dark .direction-card h3,
+.section-dark .direction-card p,
+.section-dark .project-main-card h1,
+.section-dark .project-main-card h2,
+.section-dark .project-main-card h3,
+.section-dark .project-main-card p {
+    color: #14283C !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* Keep card icons blue */
+.section-dark .feature-card .feature-icon,
+.section-dark .division-card .division-symbol,
+.section-dark .division-card .division-number,
+.section-dark .ecosystem-item .feature-icon {
+    color: #3989BB !important;
+}
+
+/* Ensure card content is not hidden */
+.section-dark .feature-card *,
+.section-dark .division-card *,
+.section-dark .ecosystem-item *,
+.section-dark .direction-card *,
+.section-dark .project-main-card * {
+    visibility: visible;
+}
+
+/* Keep the dark section background */
+.section-dark {
+    background: #14283C !important;
+}
+
+/* Prevent unwanted horizontal overflow */
+html,
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
